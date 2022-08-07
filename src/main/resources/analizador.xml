@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 
+  - This file is included by the struts.xml file as an example
+  - of how to break up the configuration file into multiple files.
+-->
+<struts>
+  <package name="analizador" namespace="/analizador" extends="struts-default">
+        <action name="Index">
+            <result>/jsp/inicio.jsp</result>
+        </action>
+        
+        <action name="processAction" 
+                class="com.analizador.generartarjetas.Generador">
+			<result name="SUCCESS">/jsp/resultado.jsp</result>
+		</action>
+   </package>
+</struts>
+
